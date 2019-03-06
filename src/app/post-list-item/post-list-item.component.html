@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item mt-2': true,
+                'list-group-item-success': loveIts > 0,
+                'list-group-item-danger': loveIts < 0}">  
+  <div class="row">
+    <p class="h3 col-lg-6">{{title}}</p>
+    <p class="h6 col-lg-6 text-right">{{created_at | date: 'dd/MM/yyyy à hh:mm:ss a' }}</p>
+  </div>
+  <div class="row">
+    <p class="h6 col-lg">{{content}}</p>
+  </div>
+  <div class="btn-toolbar">    
+      <button type="button" class="btn btn-success mr-2" (click)="add()">Love it !</button> 
+      <button type="button" class="btn btn-danger" (click)="substract()">Don't love it !</button>
+  </div>  
+</li>
