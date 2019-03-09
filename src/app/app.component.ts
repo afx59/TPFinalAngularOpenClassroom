@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from './models/post.model';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,16 @@ import { Post } from './models/post.model';
 export class AppComponent {
   
   title = 'tp1-blog-oc';
-  listPost : Array<Post> = [
-    new Post("Mon premier post", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at posuere ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus nisi lorem, fringilla sit amet mi sed, gravida malesuada neque. Duis nibh nunc, rutrum eget sapien rutrum, facilisis sollicitudin magna.",0),
-    new Post("Mon deuxième post", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at posuere ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus nisi lorem, fringilla sit amet mi sed, gravida malesuada neque. Duis nibh nunc, rutrum eget sapien rutrum, facilisis sollicitudin magna.",0),
-    new Post("Mon troisième post", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at posuere ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus nisi lorem, fringilla sit amet mi sed, gravida malesuada neque. Duis nibh nunc, rutrum eget sapien rutrum, facilisis sollicitudin magna.",0)
-  ];
+  constructor(){
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB6wrS68QnjYRaPBIWU7r81dsuqWcwe9tA",
+      authDomain: "tp-final-angular-oc.firebaseapp.com",
+      databaseURL: "https://tp-final-angular-oc.firebaseio.com",
+      projectId: "tp-final-angular-oc",
+      storageBucket: "tp-final-angular-oc.appspot.com",
+      messagingSenderId: "992950706839"
+    };
+    firebase.initializeApp(config);
+  }
 }
