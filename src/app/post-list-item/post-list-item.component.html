@@ -8,9 +8,9 @@
   <div class="row"> 
     <p class="h6 col-lg">{{ post.content }}</p>
   </div>
-  <div class="row">    
+  <div class="row" style="display:block">    
       <button class="btn btn-success mr-2" (click)="add()">Love it !</button> 
       <button class="btn btn-danger mr-2" (click)="substract()">Don't love it !</button>
-      <button class="btn btn-danger" (click)="remove()">Supprimer post</button>
+      <button class="btn btn-danger float-right" (click)="remove()">Supprimer post</button>
   </div>  
 </li>
