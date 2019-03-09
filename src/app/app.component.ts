@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from './post';
+import { Post } from './models/post.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { Post } from './post';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   title = 'tp1-blog-oc';
   listPost : Array<Post> = [
     new Post("Mon premier post", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at posuere ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus nisi lorem, fringilla sit amet mi sed, gravida malesuada neque. Duis nibh nunc, rutrum eget sapien rutrum, facilisis sollicitudin magna.",0),
